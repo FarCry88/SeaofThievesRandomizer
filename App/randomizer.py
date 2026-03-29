@@ -4,13 +4,13 @@ import random
 app = Flask(__name__)
 
 events = [
-    "Skeleton Fleet"
-    "Ghost Fleet"
-    "Skeleton Fort"
-    "Fort of the Damned"
-    "Burning Blade"
-    "Ashen Winds"
-    "Megalodon"
+    "Skeleton Fleet",
+    "Ghost Fleet",
+    "Skeleton Fort",
+    "Fort of the Damned",
+    "Burning Blade",
+    "Ashen Winds",
+    "Megalodon",
     "Kraken"
 ]
 

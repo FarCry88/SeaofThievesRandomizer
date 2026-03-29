@@ -9,6 +9,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "App/randomizer.py"]
+CMD ["python", "randomizer.py"]
 
-#EXPOSE 443
+EXPOSE 5000
