@@ -11,13 +11,28 @@ events = [
     "Burning Blade",
     "Ashen Winds",
     "Megalodon",
-    "Kraken"
+    "Kraken",
+    "Eternal Guard",
+    "Fort Hop",
+    "Island Hop",
+    "PVP"
 ]
 
 ships = [
     "Sloop",
     "Brig",
     "Galleon"
+]
+
+catches = [
+    "No Ranged Weapons",
+    "No Special Cannonballs",
+    "Not Allowed to Bilge Water",
+    "Can't Adjust Sails",
+    "No Harpoons",
+    "Cannot Board Enemy Ship",
+    "No Anchor Use",
+    "Fight in Storm"
 ]
 
 @app.route("/")
@@ -30,7 +45,8 @@ def index():
 def random_event():
     event = random.choice(events)
     ship = random.choice(ships)
-    return f"<h2>Your Event: {event}, On ship: {ship}. <br>  Yearg! Cast away matey!</h2><a href='/random'>Re-Roll</a>"
+    catch = random.choice(catches)
+    return f"<h2>Your Event: {event}, On ship: {ship}. <br> Here is your catch: {catch} <br>  Yearg! Cast away matey!</h2><a href='/random'>Re-Roll</a>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
