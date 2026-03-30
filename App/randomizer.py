@@ -30,7 +30,7 @@ def index():
 def random_event():
     event = random.choice(events)
     ship = random.choice(ships)
-    return f"<h2>Your Event: {event}, On ship: {ship}</h2><a href='/random'>Try Again</a>"
+    return f"<h2>Your Event: {event}, On ship: {ship}. <br>  Yearg! Cast away matey!</h2><a href='/random'>Re-Roll</a>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
