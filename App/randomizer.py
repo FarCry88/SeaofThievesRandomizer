@@ -15,9 +15,9 @@ events = [
 ]
 
 ships = [
-    "On Sloop",
-    "On Brig",
-    "On Galleon"
+    "Sloop",
+    "Brig",
+    "Galleon"
 ]
 
 @app.route("/")
@@ -28,8 +28,9 @@ def index():
 @app.route("/random")
 
 def random_event():
-    event = random.choice(events, ships)
-    return f"<h2>Your Event: {event}, on ship: {ships}</h2><a href='/random'>Try Again</a>"
+    event = random.choice(events)
+    ship = random.choice(ships)
+    return f"<h2>Your Event: {event}, On ship: {ship}</h2><a href='/random'>Try Again</a>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
